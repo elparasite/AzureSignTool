@@ -140,7 +140,7 @@ namespace AzureSign.Core
                 var subjectInfo = new SIGNER_SUBJECT_INFO(&subjectIndex, SignerSubjectInfoUnionChoice.SIGNER_SUBJECT_FILE, signerSubjectInfoUnion);
                 var authCodeStructure = new SIGNER_ATTR_AUTHCODE(pDescription, pDescriptionUrl);
                 var storeInfo = new SIGNER_CERT_STORE_INFO(
-                    dwCertPolicy: SignerCertStoreInfoFlags.SIGNER_CERT_POLICY_CHAIN,
+                    dwCertPolicy: SignerCertStoreInfoFlags.SIGNER_CERT_POLICY_STORE,
                     hCertStore: _certificateStore.Handle,
                     pSigningCert: _signingCertificate.Handle
                 );
